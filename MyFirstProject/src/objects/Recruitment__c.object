@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Recruited candidates</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Address__c</fullName>
+        <description>This is Address</description>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Date_Of_Birth__c</fullName>
+        <description>This is DOB</description>
+        <externalId>false</externalId>
+        <label>Date Of Birth</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <description>This is name</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Percentage__c</fullName>
+        <description>This is percentage field</description>
+        <externalId>false</externalId>
+        <label>Percentage</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone_No__c</fullName>
+        <description>This is phone no</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Phone No</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Previous_company_Name__c</fullName>
+        <description>Name of previous company</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <label>Previous company Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Qualification__c</fullName>
+        <description>This is Qualification details</description>
+        <externalId>false</externalId>
+        <label>Qualification</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MCA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BCA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BSC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Specialisation__c</fullName>
+        <externalId>false</externalId>
+        <label>Specialisation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Java</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>.Net</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Database</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Checks percentage and decides status accordingly</description>
+        <encrypted>false</encrypted>
+        <externalId>false</externalId>
+        <formula>IF( 
+   Percentage__c  &gt;  54.99 &amp;&amp;  Percentage__c &lt; 60.00,
+   &quot;Eligible&quot;,  
+   IF(
+     Percentage__c  &gt;59.99 &amp;&amp;  Percentage__c &lt; 65.00,
+     &quot;Stage 1&quot;,
+     IF( 
+       Percentage__c &gt; 64.99,
+       &quot;Selected&quot;,
+       &quot;Not Eligible&quot; 
+     )
+  ) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Years_of_Experience__c</fullName>
+        <description>This is Years of experience</description>
+        <externalId>false</externalId>
+        <label>Years of Experience</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2+ years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Recruitment</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>REC-{000000}</displayFormat>
+        <label>Recruitment Id</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Recruitments</pluralLabel>
+    <recordTypes>
+        <fullName>Experience</fullName>
+        <active>true</active>
+        <label>Experience</label>
+        <picklistValues>
+            <picklist>Qualification__c</picklist>
+            <values>
+                <fullName>BCA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Specialisation__c</picklist>
+            <values>
+                <fullName>%2ENet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Java</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Years_of_Experience__c</picklist>
+            <values>
+                <fullName>1 year</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 years</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2B years</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Fresher</fullName>
+        <active>true</active>
+        <label>Fresher</label>
+        <picklistValues>
+            <picklist>Qualification__c</picklist>
+            <values>
+                <fullName>BCA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BSC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MCA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Specialisation__c</picklist>
+            <values>
+                <fullName>%2ENet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Java</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Years_of_Experience__c</picklist>
+            <values>
+                <fullName>0 years</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Percentage_validation</fullName>
+        <active>true</active>
+        <description>Percentage field cannot be blank</description>
+        <errorConditionFormula>ISNULL( Percentage__c )</errorConditionFormula>
+        <errorDisplayField>Percentage__c</errorDisplayField>
+        <errorMessage>Percentage field cannot be null</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Qualification_required</fullName>
+        <active>true</active>
+        <description>Qualification field cannot be blank</description>
+        <errorConditionFormula>ISPICKVAL( Qualification__c , &quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>Qualification__c</errorDisplayField>
+        <errorMessage>Select Qualification</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Test</fullName>
+        <active>true</active>
+        <errorConditionFormula>true</errorConditionFormula>
+        <errorMessage>This is true</errorMessage>
+    </validationRules>
+</CustomObject>

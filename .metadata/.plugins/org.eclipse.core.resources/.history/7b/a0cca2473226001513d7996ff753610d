@@ -1,0 +1,8 @@
+public with sharing class TestApex {
+	
+	public void TestMethod()
+	{
+		System.Debug("This is test method");
+	}
+
+}
