@@ -1,3 +1,6 @@
+/*This is master branch*/
+
+
 public Account createAccount(String name)  //method to create account
 {
 Account acc = new Account();
